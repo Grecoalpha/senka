@@ -2,9 +2,9 @@
 const configuration = {
   SiteName: 'UNBL*CKED',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
-  SiteNameSize: 0.8, // Between 0 and +
+  SiteNameSize: 1.3, // Between 0 and +
   NumberOfVerticalLines: 80,
-  NumberOfDots: 8000,
+  NumberOfDots: 20000,
   colors: {
     CanvasBackgroundColor: '#232727',
     LettersColor: '#b9dfdf',
@@ -25,7 +25,7 @@ import UI from './ui.js'
 // in this instance.
 const ui = new UI(uiCallback)
 
-const windowHeightInRadians = 25
+const windowHeightInRadians = 50
 let camera, scene, renderer
 let sceneMovedAmmount = 0
 let timeoutActive = false
@@ -107,10 +107,10 @@ function generateRandomObject (verticalPosition, availableSizes, availableColors
 
   const randomWidth = availableSizes[0][randomIntFromInterval(0, availableSizes[0].length - 1)]
   const randomHeight = availableSizes[1][randomIntFromInterval(0, availableSizes[1].length - 1)]
-  const randomColor = availableColors[randomIntFromInterval(0, availableColors.length - 1)]
+  const randomColor = availableColors[randomIntFromInterval(1, availableColors.length - 1)]
 
   const geometry = new THREE.PlaneBufferGeometry(randomWidth, randomHeight, 1)
-  geometry.applyMatrix4(new THREE.Matrix4().makeTranslation(-geometry.parameters.width / 2, 0, 0 ))
+  geometry.applyMatrix4(new THREE.Matrix4().makeTranslation(-geometry.parameters.width / 2, 0.5, 0 ))
   const material = new THREE.MeshBasicMaterial({ color: randomColor, side: THREE.FrontSide })
   const mesh = new THREE.Mesh(geometry, material)
 
@@ -125,7 +125,7 @@ function generateRandomObject (verticalPosition, availableSizes, availableColors
 function loadMainLetters () {
   const fontLoader = new THREE.FontLoader()
   fontLoader.load('resources/fonts/Roboto-Black-3d.json', font => {
-    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 5, height: 3, curveSegments: 3 })
+    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 8, height: 6, curveSegments: 3 })
     textGeometry.center()
 
     textGeometry.scale(configuration.SiteNameSize, configuration.SiteNameSize, configuration.SiteNameSize)
