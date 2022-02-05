@@ -10,7 +10,7 @@ const configuration = {
     LettersColor: '#b9dfdf',
     LinesColors: ['#FFF', '#FF0000', '#93cccc'],
     LowerLinesColors: ['#232727'],
-    DotsColor: '#7d7d7d'
+    DotsColor: '#add8e6'
   }
 }
 ///////////////////////////////
@@ -63,9 +63,9 @@ function init() {
     loadMain2DLetters()
   }
   for (let index = 0; index < configuration.NumberOfVerticalLines; index++) {
-    generateRandomObject(1, [[0.2, 2, 4, 5], [0.1, 0.2]], configuration.colors.LinesColors)
+    generateRandomObject(14, [[0.2, 2, 4, 5], [0.1, 0.2]], configuration.colors.LinesColors)
     // Generate few random objects per page.
-    generateRandomObject(-windowHeightInRadians * index / 3, [[2, 4], [0.05]], configuration.colors.LowerLinesColors)
+    generateRandomObject(-windowHeightInRadians * index / 6, [[2, 4], [0.05]], configuration.colors.LowerLinesColors)
   }
 
   renderer = new THREE.WebGLRenderer()
