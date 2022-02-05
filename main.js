@@ -2,14 +2,14 @@
 const configuration = {
   SiteName: 'UNBL*CKED',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
-  SiteNameSize: 0.7, // Between 0 and +
-  NumberOfVerticalLines: 50,
-  NumberOfDots: 5000,
+  SiteNameSize: 0.8, // Between 0 and +
+  NumberOfVerticalLines: 80,
+  NumberOfDots: 8000,
   colors: {
-    CanvasBackgroundColor: '#141414',
-    LettersColor: '#FF0000',
-    LinesColors: ['#FFF', '#FF0000', '#7d7d7d'],
-    LowerLinesColors: ['#3d3d3d'],
+    CanvasBackgroundColor: '#232727',
+    LettersColor: '#b9dfdf ',
+    LinesColors: ['#FFF', '#FF0000', '#93cccc'],
+    LowerLinesColors: ['#232727'],
     DotsColor: '#7d7d7d'
   }
 }
