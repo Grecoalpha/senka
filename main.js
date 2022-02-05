@@ -4,11 +4,11 @@ const configuration = {
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
   SiteNameSize: 0.8, // Between 0 and +
   NumberOfVerticalLines: 80,
-  NumberOfDots: 8000,
+  NumberOfDots: 20000,
   colors: {
     CanvasBackgroundColor: '#232727',
     LettersColor: '#b9dfdf',
-    LinesColors: ['#FFF', '#FF0000', '#93cccc'],
+    LinesColors: ['#483d8b', '##5f9ea0', '#93cccc'],
     LowerLinesColors: ['#232727'],
     DotsColor: '#add8e6'
   }
@@ -52,8 +52,8 @@ function init() {
 
   scene = new THREE.Scene()
   scene.background = new THREE.Color(configuration.colors.CanvasBackgroundColor)
-  const near = 10
-  const far = 150
+  const near = 20
+  const far = 200
   scene.fog = new THREE.Fog(configuration.colors.CanvasBackgroundColor, near, far)
 
   // Load main letters and generate random lines.
@@ -125,7 +125,8 @@ function generateRandomObject (verticalPosition, availableSizes, availableColors
 function loadMainLetters () {
   const fontLoader = new THREE.FontLoader()
   fontLoader.load('resources/fonts/Roboto-Black-3d.json', font => {
-    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 5, height: 3, curveSegments: 3 })
+    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 8, height: 6, curveSegments: 9 }
+    
     textGeometry.center()
 
     textGeometry.scale(configuration.SiteNameSize, configuration.SiteNameSize, configuration.SiteNameSize)
