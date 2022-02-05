@@ -125,7 +125,7 @@ function generateRandomObject (verticalPosition, availableSizes, availableColors
 function loadMainLetters () {
   const fontLoader = new THREE.FontLoader()
   fontLoader.load('resources/fonts/Roboto-Black-3d.json', font => {
-    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 8, height: 6, curveSegments: 3 })
+    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 6, height: 3, curveSegments: 3 })
     textGeometry.center()
 
     textGeometry.scale(configuration.SiteNameSize, configuration.SiteNameSize, configuration.SiteNameSize)
