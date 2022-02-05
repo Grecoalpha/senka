@@ -30,12 +30,12 @@
 }
 
 :root {
-  --primaryColor: #FF0000;
-  --primaryBoldColor: #af0202;
-  --primaryBlackColor: #9b0101;
-  --secondaryColor: #ffffff;
+  --primaryColor: #b9dfdf;
+  --primaryBoldColor: #284c47;
+  --primaryBlackColor: #283c3a;
+  --secondaryColor: #96c8a2;
   --opaqueBackground: #000000e6;
-  --mainCanvasBackground: #141414;
+  --mainCanvasBackground: #3d514a;
   --primaryTextSize: 15px;
   --primaryTextSizeS: 10px;
   --letterSpacing: 5px;
