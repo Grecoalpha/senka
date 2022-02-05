@@ -1,8 +1,8 @@
 //// Main site configuration. ////
 const configuration = {
-  SiteName: 'UNBL*CKED',
+  SiteName: ' ツ  UNBL*CKED  ^_^ ',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
-  SiteNameSize: 1.3, // Between 0 and +
+  SiteNameSize: 1, // Between 0 and +
   NumberOfVerticalLines: 80,
   NumberOfDots: 20000,
   colors: {
