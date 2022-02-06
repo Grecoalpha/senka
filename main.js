@@ -1,6 +1,6 @@
 //// Main site configuration. ////
 const configuration = {
-  SiteName: ' ツ  UNBL*CKED  ^_^ ',
+  SiteName: '  UNBL*CKED   ',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
   SiteNameSize: .5, // Between 0 and +
   NumberOfVerticalLines: 40,
@@ -25,7 +25,7 @@ import UI from './ui.js'
 // in this instance.
 const ui = new UI(uiCallback)
 
-const windowHeightInRadians = 50
+const windowHeightInRadians = 40
 let camera, scene, renderer
 let sceneMovedAmmount = 0
 let timeoutActive = false
@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
 })
 
 function init() {
-  camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 2, 20000)
+  camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 2, 20000)
   camera.position.z = 20
 
   scene = new THREE.Scene()
