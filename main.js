@@ -2,7 +2,7 @@
 const configuration = {
   SiteName: '  UNBL*CKED   ',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
-  SiteNameSize: .5, // Between 0 and +
+  SiteNameSize: .7, // Between 0 and +
   NumberOfVerticalLines: 40,
   NumberOfDots: 20000,
   colors: {
@@ -110,7 +110,7 @@ function generateRandomObject (verticalPosition, availableSizes, availableColors
   const randomColor = availableColors[randomIntFromInterval(1, availableColors.length - 1)]
 
   const geometry = new THREE.PlaneBufferGeometry(randomWidth, randomHeight, 1)
-  geometry.applyMatrix4(new THREE.Matrix4().makeTranslation(-geometry.parameters.width / 2, 0.5, 0 ))
+  geometry.applyMatrix4(new THREE.Matrix4().makeTranslation(-geometry.parameters.width / 2, 1, 0 ))
   const material = new THREE.MeshBasicMaterial({ color: randomColor, side: THREE.FrontSide })
   const mesh = new THREE.Mesh(geometry, material)
 
@@ -125,7 +125,7 @@ function generateRandomObject (verticalPosition, availableSizes, availableColors
 function loadMainLetters () {
   const fontLoader = new THREE.FontLoader()
   fontLoader.load('resources/fonts/Roboto-Black-3d.json', font => {
-    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 6, height: 3, curveSegments: 3 })
+    let textGeometry = new THREE.TextGeometry(configuration.SiteName, { font: font, size: 6, height: 3, curveSegments: 6 })
     textGeometry.center()
 
     textGeometry.scale(configuration.SiteNameSize, configuration.SiteNameSize, configuration.SiteNameSize)
@@ -138,7 +138,7 @@ function loadMainLetters () {
       vertexShader: vertexShader(),
       fragmentShader: fragmentShader(),
       side: THREE.DoubleSide,
-      wireframe: false
+      wireframe: true
     })
     mainLettersMesh = new THREE.Mesh(textGeometry, textMaterial)
     scene.add(mainLettersMesh)
