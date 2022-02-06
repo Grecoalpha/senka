@@ -52,7 +52,7 @@ function init() {
 
   scene = new THREE.Scene()
   scene.background = new THREE.Color(configuration.colors.CanvasBackgroundColor)
-  const near = 10
+  const near = 20
   const far = 150
   scene.fog = new THREE.Fog(configuration.colors.CanvasBackgroundColor, near, far)
 
