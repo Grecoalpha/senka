@@ -2,7 +2,7 @@
 const configuration = {
   SiteName: ' ツ  UNBL*CKED  ^_^ ',
   Use2DTextOver3D: false, // Change to true if you want 2D over 3D
-  SiteNameSize: 1, // Between 0 and +
+  SiteNameSize: .5, // Between 0 and +
   NumberOfVerticalLines: 80,
   NumberOfDots: 20000,
   colors: {
