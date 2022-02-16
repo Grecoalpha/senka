@@ -365,7 +365,7 @@ function mouseMove (e) {
   const CameraXPosition = xCenter - e.clientX
   const CameraYPosition = yCenter - e.clientY
 
-  camera.position.x = -CameraXPosition / 100
+  camera.position.x = -CameraXPosition / 130
   camera.position.y = CameraYPosition / 100
   camera.lookAt(scene.position)
 }
