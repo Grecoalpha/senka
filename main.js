@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     init()
     animate()
-  }, 3000)
+  }, 5000)
 })
 
 function init() {
@@ -360,12 +360,12 @@ function mouseMove (e) {
   ui.ui_moveEvent(e, configuration.Use2DTextOver3D)
   if (sceneMovedAmmount > 0) return
 
-  const xCenter = window.innerWidth / 2
-  const yCenter = window.innerHeight / 2
+  const xCenter = window.innerWidth / 4
+  const yCenter = window.innerHeight / 4
   const CameraXPosition = xCenter - e.clientX
   const CameraYPosition = yCenter - e.clientY
 
-  camera.position.x = -CameraXPosition / 130
+  camera.position.x = -CameraXPosition / 30
   camera.position.y = CameraYPosition / 100
   camera.lookAt(scene.position)
 }
